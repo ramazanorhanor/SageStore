@@ -6,4 +6,13 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="CQRS\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SageStore.Domain\SageStore.Domain.csproj" />
+    <ProjectReference Include="..\SageStore.Persistence\SageStore.Persistence.csproj" />
+  </ItemGroup>
+
 </Project>
