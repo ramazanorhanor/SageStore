@@ -8,7 +8,7 @@ namespace SageStore.Api.Controllers
     {
         private static readonly string[] Summaries =
         [
-            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
+            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching","çok sıcak", "çok soğuk", "soğuk", "ılık", "sıcak", "çok sıcak", "çok soğuk"
         ];
 
         [HttpGet]
