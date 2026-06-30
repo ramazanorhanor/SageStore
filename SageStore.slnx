@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="SageStore.Api/SageStore.Api.csproj" />
+  <Project Path="SageStore.Application/SageStore.Application.csproj" />
+  <Project Path="SageStore.Domain/SageStore.Domain.csproj" />
+  <Project Path="SageStore.Persistence/SageStore.Persistence.csproj" />
+</Solution>
