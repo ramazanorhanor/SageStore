@@ -6,4 +6,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SageStore.Application\SageStore.Application.csproj" />
+  </ItemGroup>
+
 </Project>
