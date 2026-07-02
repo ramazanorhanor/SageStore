@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using SageStore.Application.Legacy.DTOs;
 using SageStore.Application.Legacy.Responses;
 using SageStore.Domain.Entities;
 using System;
@@ -12,6 +13,7 @@ namespace SageStore.Application.Legacy.Profiles
         public CategoryProfile()
         {
             CreateMap<Category, CategoryResponseDTO>();
+            CreateMap<CreateCategoryDTO, Category>().ForMember(t=>t.IsActived,src=>src.MapFrom(x=> true));
         }
     }
 }

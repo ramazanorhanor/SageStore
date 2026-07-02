@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using SageStore.Application.Legacy.Abstract;
 using SageStore.Application.Legacy.Concrete;
+using SageStore.Application.Legacy.DTOs;
 using SageStore.Domain.Entities;
 
 namespace SageStore.Api.Controllers
@@ -16,10 +17,10 @@ namespace SageStore.Api.Controllers
             return Ok(categories);
         }
         [HttpPost]
-        public async Task<IActionResult> PostAsync([FromBody] Category category)
+        public async Task<IActionResult> PostAsync([FromBody] CreateCategoryDTO category)
         {
             var categories =await categoryService.AddAsync(category);
-            return Created($"api/categories/{categories.Id}",categories);
+            return Created($"api/categories/",categories);
         }
     }
 }
