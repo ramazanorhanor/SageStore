@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using SageStore.Application.Legacy.Abstract;
 using SageStore.Application.Legacy.Concrete;
+using SageStore.Application.Legacy.Profiles;
 using SageStore.Persistence.Contexts;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,6 +13,8 @@ builder.Services.AddScoped<ICategoryService, CategoryManager>();
 builder.Services.AddDbContext<StoreContext>(opt=> { 
     opt.UseSqlServer(builder.Configuration.GetConnectionString("StoreDb"));
 });
+builder.Services.AddAutoMapper(opt=> { },typeof(CategoryProfile).Assembly);
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline. burası pipeline için gerekli olan middleware'leri eklediğimiz yerdir. Örneğin, hata sayfaları, yönlendirme, yetkilendirme gibi işlemler burada yapılır.
